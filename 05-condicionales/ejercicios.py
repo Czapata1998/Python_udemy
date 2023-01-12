@@ -76,20 +76,70 @@ print("####\n EJERCICIO 4####")
 # $1500 < compra <= $5000 entonces descuento de 15%
 # $5000 < compra entonces descuento de 20%
 
-compra = float(input("digite el valor de su compra: "))
+# compra = float(input("digite el valor de su compra: "))
 
-if compra < 800:
-    compra = compra
-    print(f"el valor de su compra es {compra}")
-elif compra >= 800 and compra <= 1500:
-    compra = compra - (compra * 0.10)
-    print(
-        f"felicidades tienes un descuento en tu compra del 10% cancela: {compra}")
-elif compra > 1500 and compra <= 5000:
-    compra = compra - (compra * 0.15)
-    print(
-        f"felicidades tienes un descuento en tu compra del 15% ancela: {compra}")
-elif compra > 5000:
-    compra = compra - (compra * 0.20)
-    print(
-        f"felicidades tienes un descuento en tu compra del 20% ancela: {compra}")
+# if compra < 800:
+#     compra = compra
+#     print(f"el valor de su compra es {compra}")
+# elif compra >= 800 and compra <= 1500:
+#     compra = compra - (compra * 0.10)
+#     print(
+#         f"felicidades tienes un descuento en tu compra del 10% cancela: {compra}")
+# elif compra > 1500 and compra <= 5000:
+#     compra = compra - (compra * 0.15)
+#     print(
+#         f"felicidades tienes un descuento en tu compra del 15% ancela: {compra}")
+# elif compra > 5000:
+#     compra = compra - (compra * 0.20)
+#     print(
+#         f"felicidades tienes un descuento en tu compra del 20% ancela: {compra}")
+
+
+print("####\n EJERCICIO 5####")
+
+# Costruir un programa que, al recibir como datos tres numeros reales, identifique cual es el mayor.
+# considera que los numeros pueden ser iguales
+
+# numero_1 = int(input("Ingrese un numero real: "))
+# numero_2 = int(input("Ingrese un numero real: "))
+# numero_3 = int(input("Ingrese un numero real: "))
+
+# if numero_1 == numero_2 and numero_3:
+#     print("los numeros son iguales")
+# elif numero_1 > numero_2 and numero_1 > numero_3:
+#     print("El numero 1 la tiene mas larga")
+# elif numero_2 > numero_1 and numero_2 > numero_3:
+#     print("El numero 2 la tiene mas grandee")
+# elif numero_3 > numero_1 and numero_3 > numero_2:
+#     print("La tres es la mas mejor")
+
+print("####\n EJERCICIO 6####")
+
+# Costruye un programa que te permita convertir de pulgadas a milimetros,
+# de yardas a metros y de millas a kilometros
+
+# Consideraciones
+# - 1 pulgada equivale a 25.40 milimetros.
+# - 1 yarda equivale a 0.9114 metros
+# - 1 milla equivale a 1.6093 kilometros
+
+# solucion con condicionales
+
+opcion = int(input("**MENÚ**  \n1. pulgadas a milimetros \n2. Yardas a metros \n3. Millas a kilometros \n"
+                     "Ingrese la opcion que desea: "))
+
+if opcion == 1:
+    pulgadas=int(input("Ingrese la cantidad de pulgadas a convertir: "))
+    milimetros = pulgadas * 25.40
+    print(f"los milimitros resultantes son {milimetros}")
+elif opcion == 2:
+    yarda = int(input("Ingrese la cantidad de yardas a convertir: "))
+    metros = yarda * 0.9114
+    print(f"las yardas resultantes son {metros}")
+elif opcion == 3:
+    milla = int(input("Ingrese la cantidad de millas a convertir: "))
+    kilometro = milla * 1.6093
+    print(f"las millas resultantes son {kilometro}")
+else:
+    print("las opciones no son validas")
+    
