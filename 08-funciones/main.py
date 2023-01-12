@@ -160,8 +160,3 @@ dime_el_año = lambda year: f"el año es {year * 2 }"
 print(dime_el_año(2034))
 
 
-# Hola
-
-# adioh
-
-# desde el job
