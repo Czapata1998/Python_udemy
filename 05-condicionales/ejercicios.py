@@ -131,15 +131,15 @@ opcion = int(input("**MENÚ**  \n1. pulgadas a milimetros \n2. Yardas a metros \
 if opcion == 1:
     pulgadas=int(input("Ingrese la cantidad de pulgadas a convertir: "))
     milimetros = pulgadas * 25.40
-    print(f"los milimitros resultantes son {milimetros}")
+    print(f"{pulgadas} pulgadas equivalen a : {milimetros} milimetros")
 elif opcion == 2:
     yarda = int(input("Ingrese la cantidad de yardas a convertir: "))
     metros = yarda * 0.9114
-    print(f"las yardas resultantes son {metros}")
+    print(f"{yarda} yardas equivalen a: {metros} metros")
 elif opcion == 3:
     milla = int(input("Ingrese la cantidad de millas a convertir: "))
     kilometro = milla * 1.6093
-    print(f"las millas resultantes son {kilometro}")
+    print(f"{milla} millas equivalen a: {kilometro} kilometros")
 else:
     print("las opciones no son validas")
     
