@@ -125,21 +125,104 @@ print("####\n EJERCICIO 6####")
 
 # solucion con condicionales
 
-opcion = int(input("**MENÚ**  \n1. pulgadas a milimetros \n2. Yardas a metros \n3. Millas a kilometros \n"
-                     "Ingrese la opcion que desea: "))
+# opcion = int(input("**MENÚ**  \n1. pulgadas a milimetros \n2. Yardas a metros \n3. Millas a kilometros \n"
+#                      "Ingrese la opcion que desea: "))
 
-if opcion == 1:
-    pulgadas=int(input("Ingrese la cantidad de pulgadas a convertir: "))
-    milimetros = pulgadas * 25.40
-    print(f"{pulgadas} pulgadas equivalen a : {milimetros} milimetros")
-elif opcion == 2:
-    yarda = int(input("Ingrese la cantidad de yardas a convertir: "))
-    metros = yarda * 0.9114
-    print(f"{yarda} yardas equivalen a: {metros} metros")
-elif opcion == 3:
-    milla = int(input("Ingrese la cantidad de millas a convertir: "))
-    kilometro = milla * 1.6093
-    print(f"{milla} millas equivalen a: {kilometro} kilometros")
-else:
-    print("las opciones no son validas")
+# if opcion == 1:
+#     pulgadas=int(input("Ingrese la cantidad de pulgadas a convertir: "))
+#     milimetros = pulgadas * 25.40
+#     print(f"{pulgadas} pulgadas equivalen a : {milimetros} milimetros")
+# elif opcion == 2:
+#     yarda = int(input("Ingrese la cantidad de yardas a convertir: "))
+#     metros = yarda * 0.9114
+#     print(f"{yarda} yardas equivalen a: {metros} metros")
+# elif opcion == 3:
+#     milla = int(input("Ingrese la cantidad de millas a convertir: "))
+#     kilometro = milla * 1.6093
+#     print(f"{milla} millas equivalen a: {kilometro} kilometros")
+# else:
+#     print("las opciones no son validas")
+    
+
+print("####\n EJERCICIO 7####")
+# En algunas oficinas del gobierno pagan horas extras a los burocratas, ademas de salarios correspondiente.
+
+# Escribe un programa que permita calcular la cantidad a pagar a un trabajado tomando en cuenta su salario
+# y las horas extra trabajadas.
+
+# las horas extra se calculan en funcion de la informacion de abajo.
+
+# cada trabajador puede tener como maximo 30 horas extra, si tiene mas, solo se le pagaran las primeras 30.
+# los trabajadores con categoria 4 o mayor a 4 no podran recibir este beneficio.
+
+# categoria 1 - $40 por hora extra
+# categoria 2 - $50 por hora extra
+# categoria 3 - $85 por hora extra    
+
+# salario = float(input("Ingrese el salario del trabajador: "))
+
+# categoria = int(input("Ingrese la categoria del trabajador:  "))
+
+# if categoria == 1: 
+#     numero_horas_extra=int(input("Ingrese la cantidad de horas extra que ha hecho el trabajador: "))
+#     if numero_horas_extra < 30:
+#         salario= salario +(numero_horas_extra * 40)
+#         print(f"El salario del empleado es {salario}")
+#     else:
+#         salario += (30 * 40) 
+#         print("es mucha plata bro")      
+# elif categoria == 2:
+#     numero_horas_extra=int(input("Ingrese la cantidad de horas extra que ha hecho el trabajador: "))
+#     if numero_horas_extra < 30:
+#         salario= salario + (numero_horas_extra * 50)
+#         print(f"El salario del empleado es {salario}")
+#     else:
+#         salario += (30 * 50) 
+#         print("es mucha plata bro")   
+# elif categoria == 3:
+#     numero_horas_extra=int(input("Ingrese la cantidad de horas extra que ha hecho el trabajador: "))
+#     if numero_horas_extra < 30:
+#         salario= salario + (numero_horas_extra * 85)
+#         print(f"El salario del empleado es {salario}")
+#     else:
+#         salario += (30 * 85) 
+#         print("es mucha plata bro") 
+# else:
+#     print("No puedes recibir el beneficio")        
+
+print("####\n EJERCICIO 7####")
+
+# Construye un programa que permita realizar la conversion de medida de pesos, longitud y volumen, de acuerdo 
+# con las conversiones dadas.
+# se deben escribir el valor a convertir, la medida en que se está expresando el valor, el nuevo valor y la nueva medida correspondiente.
+
+# MEDIDAS DE LONGITUD
+
+# 1 pulgada = 25.40 milimetros
+# 1 yarda = 0.9144 metros 
+
+# MEDIDAS DE VOLUMEN:
+# 1 pie ^3 = 0.02832 metros ^3
+# 1 yarda ^3 = 0.7646 metros ^3
+
+
+# MEDIDAS DE PESO:
+
+# 1 onza = 28.35 gramos
+# 1 libra = 0.45359 kilogramos
+
+# Switch case
+
+# Condicionales 
+# Diccionarios 
+
+#con condicionales
+
+opcion_medidas =int(input("***MENÚ PRINCIPAL***\n1 MEDIDAS DE LONGITUD\n2 MEDIDAS DE VOLUMEN"
+                          "\n3 MEDIDAS DE PESO\n ESCOJA LA OPCIÓN QUE DESEA:"))
+
+
+if opcion_medidas == 1:
+    print("\n***MEDIDAS DE LONGITUD***\n")
+    opcion_submenu=int(input("1. Pulgadas a milimetros \n2. Yardas a metros \n Escoja la opción que desea: "))
     
