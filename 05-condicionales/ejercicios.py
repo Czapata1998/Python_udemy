@@ -218,11 +218,22 @@ print("####\n EJERCICIO 7####")
 
 #con condicionales
 
-opcion_medidas =int(input("***MENÚ PRINCIPAL***\n1 MEDIDAS DE LONGITUD\n2 MEDIDAS DE VOLUMEN"
-                          "\n3 MEDIDAS DE PESO\n ESCOJA LA OPCIÓN QUE DESEA:"))
+# opcion_medidas =int(input("***MENÚ PRINCIPAL***\n1 MEDIDAS DE LONGITUD\n2 MEDIDAS DE VOLUMEN"
+#                           "\n3 MEDIDAS DE PESO\n ESCOJA LA OPCIÓN QUE DESEA:"))
 
 
-if opcion_medidas == 1:
-    print("\n***MEDIDAS DE LONGITUD***\n")
-    opcion_submenu=int(input("1. Pulgadas a milimetros \n2. Yardas a metros \n Escoja la opción que desea: "))
+# if opcion_medidas == 1:
+#     print("\n***MEDIDAS DE LONGITUD***\n")
+#     opcion_submenu=int(input("1. Pulgadas a milimetros \n2. Yardas a metros \n Escoja la opción que desea: "))
     
+# #MEDIDAS DE LONGITUD:
+# #1 pulgada = 25.40 milimetros
+# #1 yarda = 0.9144
+
+# if opcion_submenu == 1:
+#     print("------------------")
+#     pulgadas=int(input("Ingrese la cantidad de pulgadas a convertir \n2. Yardas a metros \n Escoja la opción que desea: "))
+    
+
+print("####\n EJERCICIO 8####")
+
