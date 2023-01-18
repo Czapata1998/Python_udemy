@@ -50,3 +50,4 @@ print(cantantes.index("kendo"))
 cantantes.extend(numeros)
 
 print(cantantes)
+
