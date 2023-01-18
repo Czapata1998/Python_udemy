@@ -17,20 +17,20 @@ Para acceder a esos valores podemos usar un indice numerico.
 # print(años)
 # print(variada)
 
-#Indices 
+# Indices
 
 # peliculas[0] = "La monja" #Reemplazar elemento en una lista
 # print(peliculas[1]) #Buscar un elemento puntual en una lista
 # print(peliculas)
 # print(cantantes[0:])
 
-#Añadir elementos a lista
+# Añadir elementos a lista
 
 # cantantes.append("Rubinsky") #Añadir elementos a una lista
 
 # print(cantantes)
 
-#Recorrer listas 
+# Recorrer listas
 
 # print("\n*******LISTADO DE PELICULAS*********")
 # nueva_peli = ""
@@ -39,18 +39,17 @@ Para acceder a esos valores podemos usar un indice numerico.
 #     if nueva_peli == "parar":
 #         break
 #     peliculas.append(nueva_peli)
-    
+
 
 # for pelicula in peliculas:
-#     print(f"{peliculas.index(pelicula)+1} {pelicula}") 
-    
-    
+#     print(f"{peliculas.index(pelicula)+1} {pelicula}")
 
-#listas multidimencionales
+
+# listas multidimencionales
 
 print("\n********Listado de contactos**********")
 
-contactos =[
+contactos = [
     [
         'Cristhian',
         'cristhianjulian22@gmail.com'
@@ -64,10 +63,11 @@ contactos =[
         'juank@gmail.com'
     ]
 ]
-    
+
 for contacto in contactos:
-    print(contacto[0:1])
-    
-
-
-
+    for elemento in contacto:
+        if contacto.index(elemento) == 0:
+            print("Nombre: " + elemento)
+        else:
+            print("Email: " + elemento)
+    print("\n")
