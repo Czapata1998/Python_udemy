@@ -45,7 +45,21 @@ print("##### RECORRER Y MOSTRAR #####")
     
 print(mostrarLista(numeros))
 print(mostrarLista(["Kevin", "Jovy", "Cristhian"]))
-    
+
+#Oedenar y mostrar    
+print("##### ORDENAR Y MOSTRAR #####")
+
+numeros.sort()
+
+print(mostrarLista(numeros))
+
+
+
+
+
+
+
+
 
 
  

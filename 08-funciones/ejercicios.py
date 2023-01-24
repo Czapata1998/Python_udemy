@@ -36,6 +36,7 @@ Programa que calcule el IVA de una compra del 19% sobre el valor total de la com
 # print(f"el precio de la compra sin iva es de {compra} y mas el iva es {compra+iva}")
 
 
+<<<<<<< HEAD
 """
 Programa que calcule la tabla de multiplicar de cualquier numero entero
 dado por el usuario. Debe calcular la tabla desde el 0 hasta el 12.
@@ -116,3 +117,6 @@ else:
 
 print(f"El resultado es {result}")
     
+=======
+#prueba
+>>>>>>> bd6a7722ac742ae55994dded99e60ca9ac78cc58
