@@ -105,7 +105,7 @@ def sonIguales (num1, num2):
 num1 = int(input("Ingrese el primer : "))
 num2 = int(input("Ingrese el segundo digito : "))
 
-
+##Pruebaaa
 result = sonIguales(num1, num2)
 if (result == True):
     print("Los numeros son iguales")
