@@ -23,36 +23,17 @@ de 8 numeros enteros y haga lo siguiente:
     
 #SOLUCION UDEMY
 
-numeros = [10, 14, 20, 17, 11, 28, 30, 40, 29]
+#Crear la lista
 
-#Crear funcion que recorra lista y devuelva un string
-print("##### RECORRA LISTA Y DEVUELVA UN STR #####")
+numeros = [4, 6, 7, 9, 2, 4, 13, 15,16]
 
-def mostrarLista(lista):
-    resultado = ""
+#Recorrer y mostrar
+
+print("##### Recorrer y mostrar#####")
+
+for numero in numeros:
+    print(numero)
     
-    for elemento in lista:
-        resultado += "Elemento: " + str(elemento)
-        resultado += "\n"
-    return resultado
-
-#RECORRER Y MOSTRAR
-
-print("##### RECORRER Y MOSTRAR #####")
-
-# for numero in numeros:
-#     print(numero)
-    
-print(mostrarLista(numeros))
-print(mostrarLista(["Kevin", "Jovy", "Cristhian"]))
-
-#Oedenar y mostrar    
-print("##### ORDENAR Y MOSTRAR #####")
-
-numeros.sort()
-
-print(mostrarLista(numeros))
-
 
 
 
