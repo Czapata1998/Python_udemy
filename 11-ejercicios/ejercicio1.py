@@ -34,6 +34,16 @@ print("##### Recorrer y mostrar#####")
 for numero in numeros:
     print(numero)
     
+print(mostrarLista(numeros))
+print(mostrarLista(["Kevin", "Jovy", "Cristhian"]))
+
+#Oedenar y mostrar    
+print("##### ORDENAR Y MOSTRAR #####")
+
+numeros.sort()
+
+print(mostrarLista(numeros))
+
 
 
 
