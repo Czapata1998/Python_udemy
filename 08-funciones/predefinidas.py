@@ -60,5 +60,5 @@ print(nueva_frase)
 nombre = "nombre"
 
 print(nombre)
-print(nombre.lower())
-print(nombre.upper())
+print(nombre.lower()) #Para convewrtir a minusculas
+print(nombre.upper()) #Para convertir a mayusculas
