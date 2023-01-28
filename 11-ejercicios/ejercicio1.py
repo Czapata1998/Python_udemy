@@ -30,7 +30,7 @@ numeros = [4, 6, 7, 9, 2, 4, 13, 15,16]
 #Recorrer y mostrar
 
 print("##### Recorrer y mostrar#####")
-
+mostrarLista = "mostrar lista"
 for numero in numeros:
     print(numero)
     
