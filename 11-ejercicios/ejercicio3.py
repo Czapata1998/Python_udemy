@@ -26,3 +26,6 @@ if len(texto.strip()) <= 0:
     print(texto.upper())
 else:
     print(f"el texto es{texto}")
+    
+    
+    #Comentario de prueba
