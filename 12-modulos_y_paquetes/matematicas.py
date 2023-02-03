@@ -15,4 +15,4 @@ print(f"redondear {math.floor(6.56789)}") #Lo redondea hacia abajo
 #Modulo random para sacara aleatoreos
 
 import random
-print (f"Sacar numeros aleatoreos entre 1 y 13 y el numero es:  {random.randint(1,13)}") #car numeros aleatoreos
+print (f"Sacar numeros aleatoreos entre 1 y 13 y el numero es:  {random.randint(1,13)}") #sacar numeros aleatoreos
