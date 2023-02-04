@@ -29,20 +29,39 @@ numeros = [4, 6, 7, 9, 2, 4, 13, 15,16]
 
 #Recorrer y mostrar
 
-print("##### Recorrer y mostrar#####")
-mostrarLista = "mostrar lista"
-for numero in numeros:
-    print(numero)
+# print("##### Recorrer y mostrar#####")
+# mostrarLista = "mostrar lista"
+# for numero in numeros:
+#     print(numero)
     
-print(mostrarLista(numeros))
-print(mostrarLista(["Kevin", "Jovy", "Cristhian"]))
+# print(mostrarLista(numeros))
+# print(mostrarLista(["Kevin", "Jovy", "Cristhian"]))
 
-#Oedenar y mostrar    
-print("##### ORDENAR Y MOSTRAR #####")
+# #Oedenar y mostrar    
+# print("##### ORDENAR Y MOSTRAR #####")
 
-numeros.sort()
+# numeros.sort()
 
-print(mostrarLista(numeros))
+# print(mostrarLista(numeros))
+
+print("##### Recorrer y mostrar#####")
+
+numero = [3, 5, 7, 9, 10, 13]
+
+busqueda = int(input("Introduce el numero: "))
+
+comprobar = isinstance(busqueda, int)
+while not comprobar or busqueda <= 0:
+    busqueda = int(input("Introduce el numero: "))
+else:
+    print(f"Has introducido el {busqueda}")
+    
+print(f"buscar en la lista {busqueda}")
+
+search = numeros.index(busqueda)
+print(f"el numero buscado en la lista indice es {search}")
+
+
 
 
 
