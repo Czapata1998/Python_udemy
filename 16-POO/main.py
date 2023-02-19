@@ -22,7 +22,24 @@ class Moto:
     plazas = 4
     
     #Metodos, son acciones que hace el objeto (coche) (funciones)
+    def setcolor(self, color): # esta funcion se usa para cambiar el color, o el valor del atributo o variable
+        self.color = color
+        
+    def getcolor(self): # Esta funcion se usa para obtener el color o el nuevo valor de la variable o atributo
+        return self.color
     
+    def setmodelo(self, modelo): # Se cambia el modelo
+        self.modelo = modelo
+    
+    def setmarca(self, marca): # Se cambia el modelo
+        self.marca = marca
+        
+    def getmodelo (self): # se trae el valor del modelo
+        return self.modelo
+    
+    def getmarca (self): # se trae el valor de la marca
+        return self.marca
+        
     def acelerar(self):
         self.velocidad += 3
     
@@ -38,9 +55,12 @@ class Moto:
     #Crear un objeto o instanciar la clase
     
 coche = Moto() 
-    
-print(coche.marca, coche.color)
-print(f"La velocidad de la moto es: {coche.velocidad}")
+
+coche.setcolor("negro") #  Se le cambian los valores a la propiedad o variable
+coche.setmodelo("Venom") # se le cambian los valores a la propiedad o variable
+
+print(coche.getmarca(), coche.getmodelo(), coche.getcolor())
+print("La velocidad de la moto es", coche.getvelocidad())
     
 coche.acelerar()
 coche.acelerar() # Llamamos a las funciones o metodos para modificar la funcion del objeto
@@ -51,4 +71,20 @@ coche.frenar()
 coche.frenar()
 coche.frenar()
 
-print(f"La velocidad de la moto es: {coche.velocidad}")
+print("La velocidad de la moto es:", coche.getvelocidad())
+
+
+#Crear mas objetos 
+print("----------Objeto numnero 2------------")
+
+
+moto2 = Moto()
+
+moto2.setcolor("amarillo")
+moto2.setmodelo(2023)
+moto2.setmarca("Bws")
+
+print(moto2.getcolor(), moto2.getmodelo(), moto2.getmarca())
+
+
+print(type(moto2))
