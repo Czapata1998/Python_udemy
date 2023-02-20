@@ -15,3 +15,18 @@ print("\n ---Tipos---")
 print(Moto6.getInfo())
 
 
+
+#DETECTAR TIPADO
+
+if type(Moto5) == Moto: #Se compara el valor del objeto con la clase padre
+    print("Es un objeto correcto")
+else:
+    print("No es un objeto")
+
+
+#Visibilidad
+
+
+#print(Moto.soy_publico)
+#print(Moto.__soy_privado)
+print(Moto.getPrivado(self=Moto))
