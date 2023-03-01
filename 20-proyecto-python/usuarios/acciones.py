@@ -1,4 +1,5 @@
 import usuarios.usuario as modelo
+import notas.acciones 
 
 class Acciones:
 
@@ -41,23 +42,26 @@ class Acciones:
         Acciones disponibles: 
         - Crear nota (crear)
         - Mostrar tus notas (mostrar)
-        - Eliminar notas (eliminar)
+        - borrar notas (borrar)
         - Salir (salir)
         """)
         
         accion = input("Que quieres hacer?: ")
+        hazEl= notas.acciones.Acciones()
+        
+        
         
         if accion == "crear":
-            print("Vamos a crear una nota")
+            hazEl.crear(usuario)
             self.proximasAcciones(usuario)
             
         elif accion == "mostrar":
-            print("Listando notas")
+            hazEl.mostrar(usuario)
             self.proximasAcciones(usuario)
             
             
-        elif accion == "eliminar":
-            print("Eliminar nota")
+        elif accion == "borrar":
+            hazEl.borrar(usuario)
             self.proximasAcciones(usuario)
             
         
