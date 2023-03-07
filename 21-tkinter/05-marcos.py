@@ -20,7 +20,18 @@ marco.config(
 marco.pack(side=LEFT, anchor=SW)
 marco.pack_propagate(False)
 
-Label(marco, text="Primer marco").pack(side=LEFT, anchor=SW)
+texto =  Label(marco, text="Primer marco")
+texto.config(
+    bg = "Red",
+    fg = "White",
+    font = ("Arial", 20), 
+    height= 10,
+    width= 10,
+    bd = 3,
+    #relief= "solid",
+    
+)
+texto.pack(anchor=CENTER, fill=Y, expand=YES)
 
 
 marco = Frame(marco_padre, width=250, height=250)
