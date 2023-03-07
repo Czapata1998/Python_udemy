@@ -17,8 +17,8 @@ encabezado.config(
 encabezado.grid(row=0, column=0, columnspan=12, sticky=E)
 
 #Label para el campo (NOMBRE)
-Label = Label(ventana, text="Nombre")
-Label.grid(row=1, column=0, sticky=W, padx=5, pady=5)
+label = Label(ventana, text="Nombre")
+label.grid(row=1, column=0, sticky=W, padx=5, pady=5)
 
 #Campo de texto (NOMBRE)
 campo_texto = Entry(ventana)
@@ -27,10 +27,13 @@ campo_texto.config(justify="right", state="normal")
 
 
 #Label para el campo (APELLIDOS)
-label = 
+label = Label(ventana, text="Apellidos")
+label.grid(row=2, column=0, sticky=W, padx=5, pady=5)
 
 #Campo de texto (APELLIDOS)
-
+campo_texto = Entry(ventana)
+campo_texto.grid(row=2, column=1, sticky=W, padx=5, pady=5)
+campo_texto.config(justify="left", state="normal")
 
 
 ventana.mainloop()
