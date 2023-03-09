@@ -15,7 +15,7 @@ Button(ventana, text="Mostrar alerta!!!!!", command=sacarAlerta ).pack()
 def salir(nombre):
     resultado = MessageBox.askquestion("Salir", "Quieres continuar ejecutnado la app?") #showwarning = SACA UNA ALERTA DE PELIGRO, showerror= SACA UNA ALERTA DE ERROR
     if resultado != "si":
-        MessageBox.showinfo("Chao Mor", f"Adios {nombre}")
+        MessageBox.showinfo("Salir", f"Adios {nombre}")
         ventana.destroy()  #Me permite cerrar la ventana
         
 
