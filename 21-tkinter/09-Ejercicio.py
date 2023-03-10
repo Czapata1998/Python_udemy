@@ -16,7 +16,7 @@ ventana.config(bd=25)
 
 def convertirFloat(numero):
     try:
-        result = float(numero)
+        result = float(numero) 
     except:
         result = 0
         messagebox.showerror("Error", "Introduzca valores numericos")
@@ -25,23 +25,23 @@ def convertirFloat(numero):
 
 def sumar():
     resultado.set(convertirFloat(numero1.get()) + convertirFloat(numero2.get()))
-    messagebox.showerror("Error", "Introduce datos numericos") 
+    #messagebox.showerror("Error", "Introduce datos numericos") 
     mostarResultado()
     
 def restar():
     resultado.set(convertirFloat(numero1.get()) - convertirFloat(numero2.get()))
-    messagebox.showerror("Error", "Introduce datos numericos")
+    #messagebox.showerror("Error", "Introduce datos numericos")
     mostarResultado() 
     
     
 def multiplicar():
     resultado.set(convertirFloat(numero1.get()) * convertirFloat(numero2.get()))
-    messagebox.showerror("Error", "Introduce datos numericos")
+    #messagebox.showerror("Error", "Introduce datos numericos")
     mostarResultado()
     
 def dividir():
     resultado.set(convertirFloat(numero1.get()) / convertirFloat(numero2.get()))
-    messagebox.showerror("Error", "Introduce datos numericos")  
+    #messagebox.showerror("Error", "Introduce datos numericos")  
     mostarResultado()
     
 def mostarResultado():
@@ -80,9 +80,5 @@ Button(marco, text="Sumar", command=sumar).pack(side="left", fill=X, expand=YES)
 Button(marco, text="Restar", command=restar).pack(side="left", fill=X, expand=YES)
 Button(marco, text="Multiplicar", command=multiplicar).pack(side="left", fill=X, expand=YES)
 Button(marco, text="Dividir", command=dividir).pack(side="left", fill=X, expand=YES)
-
-
-
-
 
 ventana.mainloop()
