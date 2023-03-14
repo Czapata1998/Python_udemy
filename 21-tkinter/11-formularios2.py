@@ -17,6 +17,7 @@ encabezado.grid(row=0, column=0, columnspan=6, sticky=W)
 
 # BOTONES DE CHECK
 
+
 def mostrarProfesion():
     texto = ""
 
@@ -58,67 +59,18 @@ Checkbutton(
     onvalue=1,
     offvalue=0,
     command=mostrarProfesion
+    
+    
 
 ).grid(row=3, column=0)
+
 
 
 mostrar = Label(ventana,)
 mostrar.grid(row=4, column=0)
 
 # Radio button
-def marcar():
-    marcado.config(text=opcion.get())
-    
-
-opcion = StringVar()
-opcion.set(None)
-
-Label(ventana, text="¿Cual es tu genero?").grid(row=5)
-
-Radiobutton(
-    ventana,
-    text="Maculino",
-    value="Masculino",
-    variable= opcion,
-    command=marcar
-).grid(row=6)
-
-
-
-Radiobutton(
-    ventana,
-    text="Femenino",
-    value="Femenino",
-    variable= opcion,
-    command=marcar
-).grid(row=7)
-
-marcado = Label(ventana, )
-marcado.grid(row=8)
-
 
 # Menu de opciones
-def seleccionar():
-    seleccionado.config(text=opcion.get())
-    
-    
-opcion = StringVar()
-opcion.set("Opcion 1")
-
-Label(
-    ventana,
-    text="Selecciona una opcion"
-).grid(row=5, column=1)
-select= OptionMenu(ventana, opcion, "Opcion 1", "Opcion 2", "Opcion 3")
-select.grid(row=6, column= 1)
-
-Button(ventana, text="ver", command= seleccionar).grid(row=7, column=1 )
-
-seleccionado = Label(ventana )
-seleccionado.grid(row=8, column=1)
 
 ventana.mainloop()
-
-
-
-
