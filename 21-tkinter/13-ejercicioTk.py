@@ -7,15 +7,16 @@ Crear un programa que tenga:
 - Diferentes pantallas (Realizado)
 - Formulario de añadir productos (Realizado)
 - Guardar datos temporalmente (Realizado)
-- Mostrar datos listados en la pantalla principal
-- Opcion de salir 
+- Mostrar datos listados en la pantalla principal (Realizado)
+- Opcion de salir (Realizado)
 """
 
 from tkinter import *
-
+from tkinter import ttk
 #Configuracion de la ventana
 ventana = Tk()
-ventana.geometry("400x400")
+#ventana.geometry("400x400")
+ventana.minsize(500, 500) #Para que aumente el tamano de la ventana, para que se vean los productos que se van agregando
 ventana.title("Ejercicio Cristhian Zapata Tk")
 ventana.resizable(0,0)
 
@@ -25,21 +26,28 @@ def home():
     home_label.config(
         fg= "white",
         bg= "black",
-        font=("Arial", 30),
+        font=("Arial", 20),
         padx=160,
-        pady=20
+        pady=10
     )
     home_label.grid(row=0, column=0)
-    products_box.grid(row=1)
+    products_box.grid(row=2)
     
     #LISTAR LOS PRODUCTOS
-    for product in products:
+    '''
+     for product in products:
         if len(product) == 3:
             product.append("added")
             Label(products_box, text=product[0]).grid()
             Label(products_box, text=product[1]).grid()
             Label(products_box, text=product[2]).grid()
-            Label(products_box, text="------------").grid()
+            Label(products_box, text="------------").grid() 
+     '''       
+    for product in products:
+        if len(product) == 3:
+            product.append("added")
+            products_box.insert('', 0, text=product[0], values = (product[1]))
+             
             
     
     
@@ -57,7 +65,7 @@ def add():
     add_label.config(
         fg= "white",
         bg= "black",
-        font=("Arial", 30),
+        font=("Arial", 20),
         padx=90,
         pady=20
     )
@@ -108,9 +116,9 @@ def info():
     info_label.config(
         fg= "white",
         bg= "black",
-        font=("Arial", 30),
+        font=("Arial", 20),
         padx=100,
-        pady=20
+        pady=10
     )
     info_label.grid(row=0, column=0)
     data_label.grid(row=1, column=0)
@@ -145,7 +153,13 @@ price_data = StringVar()
 
 #Definir campos de pantalla (INICIO)
 home_label = Label(ventana, text="Inicio")
-products_box = Frame(ventana, width=250)
+#products_box = Frame(ventana, width=250)
+Label(ventana).grid(row=1)
+#Label(products_box).grid(row=0)
+products_box = ttk.Treeview(height=12, columns=2)
+products_box.grid(row=1, column=0, columnspan=2)
+products_box.heading("#0", text='producto', anchor=W)
+products_box.heading("#1", text='precio', anchor=W)
 
 #Definir campos de pantalla (AÑADIR PRODUCTOS)
 add_label = Label(ventana, text="Añadir producto")
