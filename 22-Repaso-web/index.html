@@ -5,6 +5,7 @@
 <!-- ol - li = Para crear listas  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,21 +15,23 @@
 <header>
     <h1> <strong>Titulo de repaso</strong> </h1>
 </header>
+
 <body>
-    <p>Lorem ipsum dolor <em>sit amet consectetur, adipisicing</em> sit amet consectetur, adipisicing 
-    elit. Repellendus esse possimus praesentium perferendis minus natus consectetur quibusdam sapiente, autem maxime ipsam repudiandae 
-    adipisci amet et nostrum, tempore, voluptatibus ipsum quasi?</p>
+    <p>Lorem ipsum dolor <em>sit amet consectetur, adipisicing</em> sit amet consectetur, adipisicing
+        elit. Repellendus esse possimus praesentium perferendis minus natus consectetur quibusdam sapiente, autem maxime
+        ipsam repudiandae
+        adipisci amet et nostrum, tempore, voluptatibus ipsum quasi?</p>
     <br>
-    <hr> 
+    <hr>
     <br>
     <h1>la segunda prueba</h1>
-    <p>Lorem ipsum dolor sit, <span></span> amet consectetur adipisicing elit. 
-      Non iusto reiciendis quibusdam delectus ut eaque ullam incidunt repellendus! Quaerat
-      soluta eveniet aliquam impedit ex dolorum alias? Consequatur doloribus commodi molestiae?</p>
-    
-      <!-- lISTAS CON NUMEROS -->
-     <h3>Listado de frutas</h3>
-      <ol>
+    <p>Lorem ipsum dolor sit, <span></span> amet consectetur adipisicing elit.
+        Non iusto reiciendis quibusdam delectus ut eaque ullam incidunt repellendus! Quaerat
+        soluta eveniet aliquam impedit ex dolorum alias? Consequatur doloribus commodi molestiae?</p>
+
+    <!-- lISTAS CON NUMEROS -->
+    <h3>Listado de frutas</h3>
+    <ol>
         <li>Manzanas</li>
         <li>Peras</li>
         <li>Uvas</li>
@@ -41,6 +44,39 @@
 
     <h2>Imagenes en HTML</h2>
     <img src="./imagenes/img1.jpg" alt="Imagen1" title="imagen1" width="400rem" height="400rem">
+
+    <hr>
+
+    <hr>
+    <br>
+    <h3>FORMULARIOS</h3>
+    <form action="" method="">
+        <!-- Labels -->
+        <p>
+            <label for="Nombre"> Nombre </label>
+            <input type="text" name="Nombre" placeholder="Introduce tu nombre">
+        </p>
+
+        <p>
+            <label for="Descripcion"> Descripcion </label>
+            <input type="text" name="Descripcion" placeholder="Introduce la descripcion">
+        </p>
+        <!-- Radio button -->
+        <input type="radio" name="Genero" value="Hombre"> Hombre </br>
+        <input type="radio" name="Genero" value="Mujer"> Mujer </br>
+        <input type="radio" name="Genero" value="Geis"> Geis </br>
+
+
+        <!-- Select -->
+        <select name="Genero" id="">
+            <option value="hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Geis">Geis</option>
+        </select>
+
+        <input type="submit" value="Enviar formulario">
+
+    </form>
 
     <hr>
     <!-- lISTAS CON PUNTOS -->
@@ -94,5 +130,28 @@
             </ul>
         </li>
     </ul>
+
+    <h3> <strong>TABLAS</strong></h3>
+
+    <table border="1">
+        <tr>
+            <th>Nombres</th> <!-- el th es para que se pinte de negrilla la primera fila -->
+            <th>Apellidos</th>
+            <th>Pais</th>
+        </tr>
+        <tr>
+            <td>Cristhian</td>
+            <td>Zapata</td>
+            <td>Colombia</td>
+        </tr>
+        <tr>
+            <td>Santiago</td>
+            <td colspan="2">Zapata</td>
+            <!--<td>Colombia</td>  --> <!-- por si no se conoce el pais y se necesita expandir a la otra columna -->
+        </tr>
+
+    </table>
+
 </body>
+
 </html>
