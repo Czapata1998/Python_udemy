@@ -32,7 +32,8 @@ urlpatterns = [
     path('inicio/',  views.index, name="inicio"),
     path('hola_mundo/',  views.hola_mundo, name="hola_mundo"),
     path('pagina-pruebas/', views.pagina, name="Pagina"),
-    path('contacto/', views.contacto, name="contacto"),
-    path('contacto/<str:nombre>', views.contacto, name="contacto"),
-    path('contacto/<str:nombre>/<str:apellido>', views.contacto, name="contacto"),
+    path('pagina-pruebas/<int:redirigir>', views.pagina, name="Pagina"),
+    path('contacto-2/', views.contacto, name="contacto"),
+    path('contacto-2/<str:nombre>', views.contacto, name="contacto"),
+    path('contacto-2/<str:nombre>/<str:apellido>', views.contacto, name="contacto"),
 ]

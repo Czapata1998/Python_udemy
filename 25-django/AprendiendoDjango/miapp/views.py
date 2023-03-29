@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 # Create your views here.
 #MVC =modelo vista controlador - Acciones metodos
@@ -18,6 +18,10 @@ layout = """
     </li>
      <li>
         <a href="/pagina-pruebas">Pagina de pruebas</a>
+    </li>
+    
+     <li>
+        <a href="/contacto-2">Contacto</a>
     </li>
     
 </ul>
@@ -41,21 +45,19 @@ def index(request):
         
     html += "</ul>"
     
-    return HttpResponse(layout+html) 
+    return render(request,'index.html') 
    
     
 def hola_mundo(request):
-    return HttpResponse(layout+"""
-                        <h1>Hola mundo con Django</h1>
-                        <h3>Mi nombre es Cristhian Zapata</h3>
-                    """)
+    return render(request, 'hola_mundo.html')
     
    
-def pagina(request):
-    return HttpResponse(layout+"""
-        <h1>Pagina de mi web </h1>   
-        <p>Creado por Cristhian Zapata</p>            
-""")
+def pagina(request, redirigir=0):
+    
+    if redirigir ==1:
+        return redirect('contacto', nombre="Cristhian", apellido="Zapata") #Importe el redirect
+    
+    return render(request, 'pagina.html')
     
 
 def contacto(request, nombre="", apellido=""):
