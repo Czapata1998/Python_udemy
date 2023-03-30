@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%block title%} 
+        <!-- titulo de cada pagina en concreto -->
+        {%endblock %} 
+        
+        | Cristhian Zapata
+
+    </title>
+</head>
+<body>
+    <h1>Sitio Web con Django / Cristhian Zapata </h1>
+<hr/>
+<ul>
+    <li>
+        <a href="/inicio">Inicio</a>
+    </li>
+    <li>
+        <a href="/hola_mundo">Hola mundo</a>
+    </li>
+     <li>
+        <a href="/pagina-pruebas">Pagina de pruebas</a>
+    </li>
+    
+     <li>
+        <a href="/contacto-2">Contacto</a>
+    </li>
+    
+</ul>
+<hr/>
+
+<div id="content">
+    {% block content %}
+    <!-- Codigo que viene de templates -->
+    {% endblock  %}
+
+</div>
+<hr/>
+<footer>
+    Master en python &copy; Cristhian Zapata
+</footer>
+</body>
+</html>
