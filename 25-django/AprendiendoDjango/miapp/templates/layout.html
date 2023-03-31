@@ -55,11 +55,13 @@
 </div>
 
     <div id="content">
-        <h2 class="title">Titulo de prueba</h2>
-        {% block content %}
-        <!-- Codigo que viene de templates -->
-        <strong>Contenido del bloque orignial</strong>
-        {% endblock %}
+        <div class="box">
+            {% block content %}
+            <!-- Codigo que viene de templates -->
+            <strong>Contenido del bloque orignial</strong>
+            {% endblock %}
+        </div>
+
     </div>
    
     <footer>
