@@ -45,7 +45,13 @@ def index(request):
         
     html += "</ul>"
     
-    return render(request,'index.html') 
+    nombre = 'Cristian Zapata'
+    
+    return render(request,'index.html', {
+        'title': 'INICIOOOO',
+        'mi_variable': 'Soy un dato que esta en la vista',
+        'nombre' : nombre
+    }) 
    
     
 def hola_mundo(request):

@@ -38,7 +38,10 @@ header{
     margin-top: 20px;
 }
 
-
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 #logotipo h1{
     display: block;
     float: left;
