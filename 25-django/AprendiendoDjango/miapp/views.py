@@ -47,10 +47,13 @@ def index(request):
     
     nombre = 'Cristian Zapata'
     
+    lenguajes = ['python', 'javascript', 'php', 'java', 'c#']
+    
     return render(request,'index.html', {
         'title': 'INICIOOOO',
         'mi_variable': 'Soy un dato que esta en la vista',
-        'nombre' : nombre
+        'nombre' : nombre,
+        'lenguajes': lenguajes
     }) 
    
     
