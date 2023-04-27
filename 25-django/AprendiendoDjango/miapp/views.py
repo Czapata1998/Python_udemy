@@ -30,20 +30,24 @@ layout = """
  
 def index(request):   
     
-    html= """
-        <h1>Inicio</h1>
-        <p>Years hasta el 2050: </p>
-        <ul>
-    """
-    year = 2023
-    while year <= 2050:
-        if year % 2 ==0:
+    # html= """
+    #     <h1>Inicio</h1>
+    #     <p>Years hasta el 2050: </p>
+    #     <ul>
+    # """
+    # year = 2023
+    # while year <= 2050:
+    #     if year % 2 ==0:
             
-            html += f"<li>{str(year)}</li>"
-        year += 1
+    #         html += f"<li>{str(year)}</li>"
+    #     year += 1
         
         
-    html += "</ul>"
+    # html += "</ul>"
+    
+    year = 2021
+    
+    hasta = range(year, 2051)
     
     nombre = 'Cristian Zapata'
     
@@ -53,7 +57,8 @@ def index(request):
         'title': 'INICIOOOO',
         'mi_variable': 'Soy un dato que esta en la vista',
         'nombre' : nombre,
-        'lenguajes': lenguajes
+        'lenguajes': lenguajes,
+        'years': hasta
     }) 
    
     
@@ -66,7 +71,10 @@ def pagina(request, redirigir=0):
     if redirigir ==1:
         return redirect('contacto', nombre="Cristhian", apellido="Zapata") #Importe el redirect
     
-    return render(request, 'pagina.html')
+    return render(request, 'pagina.html', {
+        'texto': 'brrrr',
+        'lista': ['uno', 'dos', 'tres']
+    })
     
 
 def contacto(request, nombre="", apellido=""):

@@ -32,17 +32,17 @@
         
         <ul>
             <li>
-                <a href="/inicio">Inicio</a>
+                <a href="{% url 'index'%}">Inicio</a>
             </li>
             <li>
-                <a href="/hola_mundo">Hola mundo</a>
+                <a href="{% url 'hola_mundo'%}">Hola mundo</a>
             </li>
             <li>
-                <a href="/pagina-pruebas">Pagina de pruebas</a>
+                <a href="{% url 'Pagina'%}">Pagina de pruebas</a>
             </li>
 
             <li>
-                <a href="/contacto-2">Contacto</a>
+                <a href="{% url 'contacto' nombre='Cristhian' apellido='Zapata'%}">Contacto</a>
             </li>
 
         </ul>
@@ -57,6 +57,8 @@
     <div id="content">
         <div class="box">
             {% block content %}
+
+            
             <!-- Codigo que viene de templates -->
             <strong>Contenido del bloque orignial</strong>
             {% endblock %}
@@ -65,7 +67,7 @@
     </div>
    
     <footer>
-        Master en python &copy; Cristhian Zapata
+        Master en python &copy; Cristhian Zapata - {% now "d/m/Y"%}  #Para mostrar fecha
     </footer>
 </body>
 

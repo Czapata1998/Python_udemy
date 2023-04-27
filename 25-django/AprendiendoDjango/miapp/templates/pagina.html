@@ -4,7 +4,15 @@
 
 {%block content%}
 <h1 class="title">Pagina de mi web </h1>   
-<p>Creado por Cristhian Zapata</p>
+<p>{{"Creado por Cristhian Zapata" |cut:""}}</p>
+
+{{texto|default:"no hay nada"}}
+
+
+<p>{{lista | join:', '}}</p> 
+<p>{{lista | length}}</p> 
+<p>{{lista | random}}</p> 
+
 {%endblock%}
 
  
