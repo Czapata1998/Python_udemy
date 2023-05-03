@@ -36,4 +36,6 @@ urlpatterns = [
     path('contacto-2/', views.contacto, name="contacto"),
     path('contacto-2/<str:nombre>', views.contacto, name="contacto"),
     path('contacto-2/<str:nombre>/<str:apellido>', views.contacto, name="contacto"),
+    path('crear-articulo/<str:title>/<str:content>/<str:public>', views.crear_articulo, name="crear_articulo"),
+    
 ]
