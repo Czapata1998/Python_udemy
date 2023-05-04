@@ -101,6 +101,27 @@ def crear_articulo(request, title, content, public):
     
     
     
+def articulo(request):
+    try:
+        articulo = Article.objects.get(id=3, public=True)
+        response= f"Articulo: <br/> {articulo.id}. {articulo.title}" 
+    except:
+        response = "Articulo no encontrado"
+        
+    return HttpResponse(response)
+
+def editar_Articulo(request, id):
+    
+    articulo =Article.objects.get(pk=id) 
+    
+    articulo.title = "Noriel"
+    articulo.content = "Jun"
+    articulo.public = True
+    
+    articulo.save()
+    
+    return HttpResponse(f"Articulo {articulo.id} Editado <strong>{articulo.title}</strong> - {articulo.content}")
+    
     
     
     
