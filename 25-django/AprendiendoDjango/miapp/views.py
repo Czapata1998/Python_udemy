@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article 
-
+from django.db.models import Q
 # Create your views here.
 #MVC =modelo vista controlador - Acciones metodos
 #MVT =modelo vista template - Acciones metodos
@@ -126,6 +126,20 @@ def articulos (request):
     articulos = Article.objects.all()
     
     #articulos = Article.objects.filter(id__lte=12, title__contains="2")
+    
+    articulos =  Article.objects.filter(
+        title = "Articulo",
+       
+        
+    ).exclude(
+       public = True 
+    )
+    
+    articulos =  Article.objects.filter(
+        Q(title__contains="2") | Q(title__contains="4")
+    )
+    
+    #articulos = Article.objects.raw("SELECT * FROM miapp_article WHERE title='Articulo 2' AND public =0")
     
     return render(request, 'articulos.html', {
         'articulos': articulos
