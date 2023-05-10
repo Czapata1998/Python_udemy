@@ -99,11 +99,37 @@ def crear_articulo(request, title, content, public):
     return HttpResponse(f"Articulo crerado: <strong>{articulo.title}</strong> - {articulo.content}")
     
     
+def save_articulo(request):
+    if request.method == 'POST':
+        title = request.POST['title']
+        
+        if len(title) <= 5:
+            return HttpResponse("<h2>El titulo es muy corto</h2>")  
+         
+        content = request.POST['content']
+        public = request.POST['public']
+
+        articulo = Article(
+            title=title,
+            content=content,
+            public=public
+        )
+
+        articulo.save()
+        return HttpResponse(f"Articulo creado: <strong>{articulo.title}</strong> - {articulo.content}")
+
+    else:
+        return HttpResponse("<h2>No se ha podido crear el articulo</h2>")
+
+def create_article(request):
+    
+    return render(request, 'crear_articulo.html')
+    
     
     
 def articulo(request):
     try:
-        articulo = Article.objects.get(id=3, public=True)
+        articulo = Article.objects.get( public=True)
         response= f"Articulo: <br/> {articulo.id}. {articulo.title}" 
     except:
         response = "Articulo no encontrado"
@@ -112,7 +138,7 @@ def articulo(request):
 
 def editar_Articulo(request, id):
     
-    articulo =Article.objects.get(pk=id) 
+    articulo =Article.objects.get(pk=id)  
     
     articulo.title = "Noriel"
     articulo.content = "Jun"
@@ -127,6 +153,7 @@ def articulos (request):
     
     #articulos = Article.objects.filter(id__lte=12, title__contains="2")
     
+    '''    
     articulos =  Article.objects.filter(
         title = "Articulo",
        
@@ -137,7 +164,7 @@ def articulos (request):
     
     articulos =  Article.objects.filter(
         Q(title__contains="2") | Q(title__contains="4")
-    )
+    ) '''
     
     #articulos = Article.objects.raw("SELECT * FROM miapp_article WHERE title='Articulo 2' AND public =0")
     

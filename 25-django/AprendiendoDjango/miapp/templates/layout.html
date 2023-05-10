@@ -44,6 +44,12 @@
             <li>
                 <a href="{% url 'Pagina'%}">Pagina de pruebas</a>
             </li>
+            <li>
+                <a href="{% url 'create_article'%}">Crear articulo</a>
+            </li>
+{% comment %}             <li>
+                <a href="{% url 'save_articulo'%}">Guardar articulo</a>
+            </li> {% endcomment %}
 
             <li>
                 <a href="{% url 'contacto' nombre='Cristhian' apellido='Zapata'%}">Contacto</a>
@@ -64,7 +70,7 @@
 
             
             <!-- Codigo que viene de templates -->
-            <strong>Contenido del bloque orignial</strong>
+            {% comment %} <strong>Contenido del bloque orignial</strong> {% endcomment %}
             {% endblock %}
         </div>
 
