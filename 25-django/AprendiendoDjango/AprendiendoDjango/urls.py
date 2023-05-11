@@ -43,5 +43,6 @@ urlpatterns = [
     path('borrar_articulo/<int:id>', views.borrar_articulo, name="borrar_articulo"),
     path('save_articulo/', views.save_articulo, name="save_articulo"),
     path('create_article/', views.create_article, name="create_article"),
+    path('create_full_article/', views.create_full_article, name="full_article"),
     
 ]

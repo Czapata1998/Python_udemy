@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article 
 from django.db.models import Q
+from miapp.forms import FormArticle
 # Create your views here.
 #MVC =modelo vista controlador - Acciones metodos
 #MVT =modelo vista template - Acciones metodos
@@ -172,7 +173,13 @@ def articulos (request):
         'articulos': articulos
     })
     
+
+def create_full_article(request):
+    formulario = FormArticle()
     
+    return render(request, 'create_full_article.html', {
+        'form': formulario
+    })
     
 def borrar_articulo(request, id):
     articulo =  Article.objects.get(pk=id)
@@ -182,7 +189,7 @@ def borrar_articulo(request, id):
     return redirect('articulos')
     
     
-    
+
     
     
     
