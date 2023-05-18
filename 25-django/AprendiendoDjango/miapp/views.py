@@ -2,6 +2,9 @@ from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article 
 from django.db.models import Q
 from miapp.forms import FormArticle
+from django.contrib import messages
+
+
 # Create your views here.
 #MVC =modelo vista controlador - Acciones metodos
 #MVT =modelo vista template - Acciones metodos
@@ -126,16 +129,19 @@ def create_article(request):
     
     return render(request, 'crear_articulo.html')
     
-    
-    
+
+
+
 def articulo(request):
     try:
-        articulo = Article.objects.get( public=True)
-        response= f"Articulo: <br/> {articulo.id}. {articulo.title}" 
-    except:
+        articulo = Article.objects.filter(public=True).first()
+        response = f"Articulo: <br/> {articulo.id}. {articulo.title}" 
+    except Article.DoesNotExist:
         response = "Articulo no encontrado"
         
     return HttpResponse(response)
+
+
 
 def editar_Articulo(request, id):
     
@@ -173,38 +179,37 @@ def articulos (request):
         'articulos': articulos
     })
     
-
 def create_full_article(request):
-    
-    
     if request.method == 'POST':
-        
         formulario = FormArticle(request.POST)
-        
+
         if formulario.is_valid():
             data_form = formulario.cleaned_data
-            
             title = data_form.get('title')
             content = data_form['content']
             public = data_form['public']
-            
-            articulo = Article(
-            title=title,
-            content=content,
-            public=public
-        )
 
-        articulo.save()
-        
-        return redirect('articulo')  
-        #return HttpResponse(articulo.title + ' - ' + articulo.content + ' - ' + str(articulo.public))
-        
+            articulo = Article(
+                title=title,
+                content=content,
+                public=public
+            )
+            articulo.save()
+            
+            #CREAR MENSAJE FLASH (SESION QUE SOLO SE MUESTRA UNA VEZ)
+            
+            messages.success(request, f'Has creado correctamente el articulo {articulo.id}')
+
+            return redirect('articulos')
+
     else:
         formulario = FormArticle()
-    
+
     return render(request, 'create_full_article.html', {
         'form': formulario
     })
+
+
     
 def borrar_articulo(request, id):
     articulo =  Article.objects.get(pk=id)
