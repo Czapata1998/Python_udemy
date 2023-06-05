@@ -49,6 +49,8 @@ urlpatterns = [
     
 ]
 
+
+
 #Configuracion para cargar imagenes
 
 if  settings.DEBUG:
