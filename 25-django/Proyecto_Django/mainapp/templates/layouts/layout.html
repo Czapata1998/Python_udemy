@@ -38,12 +38,30 @@
            <li>
                 <a href="{% url 'index'%}">Inicio</a>
            </li>
+
+           <li>
+            <a href="{% url 'list_articles' %}"> Categoria</a>
+
+            <ul>
+                <li>
+                    <a href="{% url 'index'%}">Categoria 1</a>
+                </li>
+                <li>
+                    <a href="{% url 'index'%}">Categoria 2</a>
+                </li>
+                <li>
+                    <a href="{% url 'index'%}">Categoria 3</a>
+                </li>
+            </ul>
+          </li>
+
            {% for page in pages%}
            <li>
              <a href="{% url 'page' page.2 %}">{{page.1}}</a>
            </li>
 
            {% endfor %}
+           
 
         </ul>
     </nav>
