@@ -1,0 +1,89 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {%block title%}
+        <!-- titulo de cada pagina en concreto -->
+        {%endblock %}
+
+        | Cristhian Zapata
+
+    </title>
+
+    
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+</head>
+
+<body>
+    <!-- CABECERA DE LA PAGINA -->
+    <header>
+        <div id="logotipo">
+            <!-- Logo django -->
+            <img src="{% static 'imagenes/logo.png' %}" alt="" />
+            <h1>Proyecto Web con Django | CZ </h1>
+        </div>
+    </header>
+
+    <nav>
+        
+        <ul>
+           <li>
+                <a href="{% url 'index'%}">Inicio</a>
+           </li>
+
+           <li>
+            <a href="{% url 'list_articles' %}"> Categoria</a>
+
+            <ul>
+                {% for category in categories %}
+                    <li>
+                        <a href="{% url 'category' category.0 %}">{{category.1}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+          </li>
+
+           {% for page in pages %}
+           <li>
+             <a href="{% url 'page' page.2 %}">{{page.1}}</a>
+           </li>
+
+           {% endfor %}
+           
+
+        </ul>
+    </nav>
+<div class="barra">
+
+<span class="esquina-izquierda"></span>    
+<span class="relleno-barra"></span>    
+<span class="esquina-derecha"></span>    
+</div>
+
+    <div id="content">
+       <!--  {{ids}} -->
+        <div class="box">
+            {% block content %}
+
+            
+            <!-- Codigo que viene de templates -->
+            {% comment %} <strong>Contenido del bloque orignial</strong> {% endcomment %}
+            {% endblock %}
+        </div>
+
+    </div>
+   
+    <footer>
+        Master en python &copy; Cristhian Zapata - {% now "d/m/Y"%}  #Para mostrar fecha
+    </footer>
+</body>
+
+</html>

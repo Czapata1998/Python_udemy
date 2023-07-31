@@ -1,10 +1,43 @@
 {% extends 'layout.html' %}
 
-{%block title%} Index {%endblock%}
+{%block title%} {{title}} {%endblock%}
 
 
 {% block content %}
+
+{% include 'fecha-actual.html' with saludo="Hola mundo desde plantilla" %}
+
+{% comment %} esto es un comentario en html de django{% endcomment %}
+
+
+<h1 class="title">{{title}}</h1>
+<p>{{mi_variable}}</p>  {% comment %} aca se interpola una variable que es coger una variable que tengo dentro de un metodo y mostrarla en un template {% endcomment %}
+
+{% if nombre and nombre == 'Cristhian Zapata' %} 
+    <p>{{nombre}}</p>
+{% else %}
+    <strong>El nombre no existe o no coincide</strong>
+{% endif %}
+
+<hr>
 <h1 class="title">Inicio</h1>
-<p>Years hasta el 2050: </p>
+ 
+<br>
+<h2>Listado de lenguajes de programacion</h2>
+<ul>
+    {%for lenguaje in lenguajes %}
+     <li>{{forloop.counter}}. {{lenguaje}}  </li>
+
+     {% empty %}
+    <p>No hay lenguajes que mostrar</p>
+     
+     {% endfor %}
+</ul>
+
+
+
+
 <p>Esto es una prueba de contenido </p>
+
+
 {% endblock  %}
