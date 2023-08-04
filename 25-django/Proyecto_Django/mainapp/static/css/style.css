@@ -229,7 +229,10 @@ box .image img{
 
 
 .box form input[type="text"],
-.box form textarea{
+.box form input[type="email"],
+.box form input[type="password"],
+.box form textarea
+.box form select{
     width: 100%;
     margin-bottom: 20px;
 }
@@ -272,13 +275,22 @@ box .image img{
     text-shadow: 0px 0px 1px black;
 }
 
-.message{
+.message,
+.alert-succes,
+.alert{
 padding: 20px;
 background: #2ba977;
 color: #ddd;
 text-align: center;
 margin-bottom: 1rem;
 }
+
+
+.alert-warning{
+    background: red;
+}
+
+
 .title{
 color: #444;
 letter-spacing: 1px;
@@ -286,6 +298,8 @@ font-size: 30px;
 margin-bottom: 10px;
 margin-top: 5px;
 }
+
+
 
 
 .date{
