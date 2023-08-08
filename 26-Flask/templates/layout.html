@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} | Flask, Aprendiendo Flask {% endblock title %}  </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }} ">
+</head>
+<body>
+
+        <!-- CABECERA DE LA PAGINA -->
+    <header>
+        <div id="logotipo">
+            <!-- Logo django -->
+            <img src="{{ url_for('static', filename='img/flask.png') }}" alt="" />
+            <h1>Proyecto Flask </h1>
+        </div>
+    </header>
+
+    <nav>
+        
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a href="{{url_for ('info')}}">Informacion</a>
+            </li>
+            <li>
+                <a href="{{url_for ('contacto')}}">Contacto</a>
+            </li>
+            <li>
+                <a href="{{url_for ('lenguajes')}}">Lenguajes de programación</a>
+            </li>
+        </ul>
+    </nav>
+<div class="barra">
+
+<span class="esquina-izquierda"></span>    
+<span class="relleno-barra"></span>    
+<span class="esquina-derecha"></span>    
+</div>
+
+    <div id="content">
+       <!--  {{ids}} -->
+        <div class="box">
+            {% block content %}
+
+            
+            <!-- Codigo que viene de templates -->
+            
+            {% endblock %}
+        </div>
+
+    </div>
+   
+    <footer>
+        Master en python &copy; Cristhian Zapata
+    </footer>
+</body>
+</html>
